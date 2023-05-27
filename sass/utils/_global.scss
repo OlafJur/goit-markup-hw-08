@@ -4,6 +4,13 @@
     outline: none;
 }
 
+img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: getColor(main-font-color);
@@ -21,7 +28,14 @@ h2 {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 480px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @include tablet {
+        max-width: 768px;
+    }
+    @include desktop {
+        max-width: 1200px;
+    }
 }

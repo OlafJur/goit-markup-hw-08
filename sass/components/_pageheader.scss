@@ -19,8 +19,18 @@ $letterSpacing: 0.02em;
     align-items: center;
     gap: 93px;
 
+    &__mobile-icon {
+        fill: black;
+        width: 40px;
+        height: 40px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
     &__menu {
-        display: flex;
+        display: none;
         gap: 46px;
     }
     &__item {
@@ -64,7 +74,7 @@ $letterSpacing: 0.02em;
     }
 }
 .contacts {
-    display: flex;
+    display: none;
     gap: 30px;
     margin-right: 12px;
     justify-content: center;

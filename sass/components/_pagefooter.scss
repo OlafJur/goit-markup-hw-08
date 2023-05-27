@@ -3,6 +3,7 @@ $fontWeight: 700;
 $lineHeight: 1.14;
 
 .footer {
+    display: none;
     padding: 60px 0;
     background: getColor(main-background);
     color: white;
@@ -13,6 +14,7 @@ $lineHeight: 1.14;
     }
 }
 .page-footer {
+    display: none;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -10,8 +10,12 @@
     background-color: getColor(main-background);
 
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
     color: white;
+
+    @include desktop {
+        padding: 200px 0;
+    }
 
     &__title {
         max-width: 696px;
@@ -20,6 +24,11 @@
         line-height: 1.36;
         letter-spacing: 0.06em;
         margin: 0 auto 30px;
+
+        @include desktop {
+            font-size: 44px;
+            max-width: 696px;
+        }
     }
 
     &__btn {
