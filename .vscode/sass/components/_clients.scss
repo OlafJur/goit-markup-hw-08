@@ -1,0 +1,39 @@
+.clients {
+    display: none;
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__link {
+        @include transition();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 170px;
+        height: 92px;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+
+        &:is(:hover, focus) {
+            border-color: getColor(primary-color);
+        }
+        &:hover > .clients__icon {
+            fill: getColor(primary-color);
+        }
+        &:focus > .clients__icon {
+            fill: getColor(primary-color);
+        }
+    }
+
+    &__icon {
+        @include transition();
+        fill: getColor(scnd-font-color);
+        display: inline-flex;
+        width: 106px;
+        height: 60px;
+    }
+}

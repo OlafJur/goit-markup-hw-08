@@ -1,0 +1,119 @@
+$fontWeight: 500;
+$fontSize: 14px;
+$lineHeight: 1.14;
+$letterSpacing: 0.02em;
+
+.mobile-menu__btn {
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    @include tablet {
+        display: none;
+    }
+}
+.mobile-menu__icon {
+    width: 24px;
+    height: 16;
+    fill: black;
+}
+.page-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid getColor(main-border);
+    padding: 24px 0 25px;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.nav {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 93px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 46px;
+    }
+    &__item {
+        @include transition();
+        text-decoration: none;
+        color: getColor(main-font-color);
+        font-weight: $fontWeight;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        letter-spacing: $letterSpacing;
+
+        &:is(:hover, :focus) {
+            color: getColor(primary-color);
+        }
+        &__underline {
+            position: relative;
+            color: getColor(primary-color);
+
+            &::after {
+                content: '';
+                @include borderBottom();
+                display: inline-block;
+                width: 100%;
+                left: 0;
+                margin-top: 47px;
+                position: absolute;
+            }
+
+            &:hover::after {
+                @include borderBottom();
+                content: '';
+                display: inline-block;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                margin-top: 47px;
+                position: absolute;
+            }
+        }
+    }
+}
+.contacts {
+    display: none;
+    @include tablet {
+        gap: 30px;
+        margin-right: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+    &:is(:hover, :focus) {
+        color: getColor(primary-color);
+    }
+    &__link {
+        @extend .contacts;
+        @include transition();
+        gap: 10px;
+        white-space: nowrap;
+        text-decoration: none;
+        color: getColor(scnd-font-color);
+        fill: currentColor;
+        font-weight: $fontWeight;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        display: flex;
+    }
+
+    &__icon {
+        @include contactIcon();
+    }
+    &__icon--smartphone {
+        @include contactIcon();
+        height: 16px;
+    }
+}

@@ -1,0 +1,39 @@
+$fontSize: 14px;
+$fontWeight: 700;
+$letterSpacing: 0.03em;
+.article {
+    display: none;
+    @include tablet {
+        display: flex;
+        gap: 30px;
+    }
+    &__title {
+        margin-bottom: 10px;
+        display: flex;
+        font-weight: $fontWeight;
+        font-size: $fontSize;
+        letter-spacing: $letterSpacing;
+        line-height: 1.14;
+    }
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: $fontSize;
+        line-height: 24px;
+        letter-spacing: $letterSpacing;
+        color: getColor(scnd-font-color);
+    }
+    &__box {
+        margin-bottom: 30px;
+        background-color: getColor(scnd-background);
+        border-radius: 4px;
+        border-style: none;
+        width: 270px;
+        height: 120px;
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+        padding: 25px 100px;
+    }
+}
