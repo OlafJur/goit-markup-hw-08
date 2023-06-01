@@ -5,33 +5,43 @@ $letterSpacing: 0.02em;
 
 .header {
     border-bottom: 1px solid getColor(main-border);
-    padding: 24px 0 25px;
+    padding: 10px 0;
+
+    @include tablet {
+        padding: 21px 0;
+    }
+    @include desktop {
+        padding: 24px 0 25px;
+    }
 }
 
 .page-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    gap: 93px;
+    justify-content: space-between;
 
-    &__mobile-icon {
-        fill: black;
-        width: 40px;
-        height: 40px;
-
-        @include tablet {
-            display: none;
-        }
+    @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 93px;
     }
 
     &__menu {
         display: none;
-        gap: 46px;
+
+        @include tablet {
+            display: flex;
+            gap: 46px;
+        }
+        @include desktop {
+            display: flex;
+            gap: 46px;
+        }
     }
     &__item {
         @include transition();
@@ -75,10 +85,21 @@ $letterSpacing: 0.02em;
 }
 .contacts {
     display: none;
-    gap: 30px;
-    margin-right: 12px;
-    justify-content: center;
-    align-items: center;
+
+    @include tablet {
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    @include desktop {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
 
     &:is(:hover, :focus) {
         color: getColor(primary-color);
@@ -86,6 +107,7 @@ $letterSpacing: 0.02em;
     &__link {
         @extend .contacts;
         @include transition();
+
         gap: 10px;
         white-space: nowrap;
         text-decoration: none;
@@ -103,5 +125,26 @@ $letterSpacing: 0.02em;
     &__icon--smartphone {
         @include contactIcon();
         height: 16px;
+    }
+}
+.navigation-mobile {
+    display: flex;
+    min-width: 30px;
+    min-height: 30px;
+
+    @include tablet {
+        display: none;
+    }
+    &__icon {
+        width: 24px;
+        height: 16px;
+        fill: black;
+    }
+    &__button {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        border: none;
+        background-color: white;
     }
 }

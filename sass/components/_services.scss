@@ -4,7 +4,11 @@ $lineHeight: 1.14;
 
 .services {
     display: none;
-    margin-top: -94px;
+
+    @include desktop {
+        display: flex;
+        margin-top: -94px;
+    }
 
     &__title {
         @include h2style();

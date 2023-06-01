@@ -1,9 +1,17 @@
 .clients {
-    display: none;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
 
     &__link {
         @include transition();

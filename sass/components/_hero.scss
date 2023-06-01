@@ -4,23 +4,68 @@
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
         ),
-        url('../images/hero-photo.jpg');
+        url('../images/hero/backgroundMobile@1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-color: getColor(main-background);
-
     text-align: center;
     padding: 118px 0;
+    margin: 0 auto;
     color: white;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+                to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/hero/backgroundMobile@2.jpg');
+    }
 
+    @include tablet {
+        background-image: linear-gradient(
+                to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/hero/backgroundTablet@1.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    to top,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/hero/backgroundTablet@2.jpg');
+        }
+    }
     @include desktop {
         padding: 200px 0;
+
+        background-image: linear-gradient(
+                to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/hero/backgroundDesktop@1.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    to top,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/hero/backgroundDesktop@2.jpg');
+        }
     }
 
     &__title {
-        max-width: 696px;
+        max-width: 365px;
         font-weight: 900;
-        font-size: 44px;
+        font-size: 26px;
         line-height: 1.36;
         letter-spacing: 0.06em;
         margin: 0 auto 30px;
