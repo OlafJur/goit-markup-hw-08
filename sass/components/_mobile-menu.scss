@@ -1,11 +1,13 @@
 .menu-container {
-    display: none;
     background-color: white;
     position: fixed;
     inset: 0;
-    // display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
 
     &__close-btn {
         position: absolute;

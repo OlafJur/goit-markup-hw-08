@@ -18,9 +18,9 @@
 
 .modal {
     position: absolute;
-    min-height: 581px;
-    width: 528px;
-    top: 20%;
+    max-width: 528px;
+    width: 100%;
+    height: inherit;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -29,12 +29,18 @@
     transform: translate(-50%, -50%), scale(1);
     transition: transform 0.2s ease-in;
 
+    @include desktop {
+        top: 20%;
+        max-width: 609px;
+    }
+
     &__title {
         margin-top: 40px;
         display: flex;
         justify-content: center;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 14px;
+        text-align: center;
         line-height: 1.15;
         letter-spacing: 0.03em;
     }

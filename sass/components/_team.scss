@@ -10,9 +10,10 @@ $lineHeight: 1.18;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 
-    @include desktop {
+    @include tablet {
         flex-direction: row;
         flex-wrap: wrap;
     }

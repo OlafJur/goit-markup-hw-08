@@ -2,10 +2,10 @@ $fontSize: 14px;
 $fontWeight: 700;
 $letterSpacing: 0.03em;
 .article {
+    padding: 0 15px;
+
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: fit-content;
 
     @include tablet {
         display: flex;
@@ -19,6 +19,7 @@ $letterSpacing: 0.03em;
     }
 
     &__element {
+        max-width: 450px;
         display: flex;
         max-width: fit-content;
     }
@@ -55,6 +56,7 @@ $letterSpacing: 0.03em;
     }
     &__box {
         max-width: 450px;
+        text-align: center;
         max-height: 120px;
         margin-bottom: 30px;
         background-color: getColor(scnd-background);
@@ -69,15 +71,12 @@ $letterSpacing: 0.03em;
         }
     }
     &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: auto;
         width: 70px;
         height: 70px;
-        padding: 25px 190px;
-
-        @include tablet {
-            padding: 25px 142px;
-        }
-        @include desktop {
-            padding: 25px 100px;
-        }
     }
 }
