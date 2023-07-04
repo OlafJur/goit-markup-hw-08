@@ -5,17 +5,16 @@ $letterSpacing: 0.03em;
     padding: 0 15px;
 
     display: flex;
+    gap: 30px;
     flex-direction: column;
 
     @include tablet {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 30px;
     }
     @include desktop {
         display: flex;
-        gap: 30px;
     }
 
     &__element {

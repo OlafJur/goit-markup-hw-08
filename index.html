@@ -209,12 +209,20 @@
                 <div class="container">
                     <h2 class="title">Nasz zespół</h2>
                     <ul class="members">
-                        <li class="members__card">
-                            <img
-                                src="./images/team/product-designer.jpg"
+                        <li class="members__card">                    
+                                <img class="members__img"
+                                src="./images/team/product-desinger1Mobile.jpg"
                                 alt="John Doe"
-                                
-                            />
+                                srcset="
+                                ./images/team/product-desinger1Mobile.jpg 450w,
+                                ./images/team/product-desinger2Mobile.jpg 900w,
+                                ./images/team/product-desinger1Tablet.jpg 354w,
+                                ./images/team/product-desinger2Tablet.jpg 708w,
+                                ./images/team/product-desinger1Desktop.jpg 270w,
+                                ./images/team/product-desinger2Desktop.jpg 540w"
+
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                                />       
                             <div>
                                 <h3 class="members__name">John Doe</h3>
                                 <p class="members__job">Product Designer</p>
@@ -251,11 +259,19 @@
                             </div>
                         </li>
                         <li class="members__card">
-                            <img
-                                src="./images/team/frontend-developer.jpg"
+                            <img class="members__img"
+                                src="./images/team/frontend-developer1Mobile.jpg"
                                 alt="John Doe"
-                               
-                            />
+                                srcset="
+                                ./images/team/frontend-developer1Mobile.jpg 450w,
+                                ./images/team/frontend-developer2Mobile.jpg 900w,
+                                ./images/team/frontend-developer1Tablet.jpg 354w,
+                                ./images/team/frontend-developer2Tablet.jpg 708w,
+                                ./images/team/frontend-developer1Desktop.jpg 270w,
+                                ./images/team/frontend-developer2Desktop.jpg 540w"
+
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                                />
                             <div>
                                 <h3 class="members__name">John Doe</h3>
                                 <p class="members__job">Frontend Developer</p>
@@ -292,11 +308,19 @@
                             </div>
                         </li>
                         <li class="members__card">
-                            <img
-                                src="./images/team/marketing.jpg"
+                            <img class="members__img"
+                                src="./images/team/marketing1Mobile.jpg"
                                 alt="John Doe"
-                              
-                            />
+                                srcset="
+                                ./images/team/marketing1Mobile.jpg 450w,
+                                ./images/team/marketing2Mobile.jpg 900w,
+                                ./images/team/marketing1Tablet.jpg 354w,
+                                ./images/team/marketing2Tablet.jpg 708w,
+                                ./images/team/marketing1Desktop.jpg 270w,
+                                ./images/team/marketing2Desktop.jpg 540w"
+
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                                />
                             <div>
                                 <h3 class="members__name">John Doe</h3>
                                 <p class="members__job">Marketing</p>
@@ -333,11 +357,19 @@
                             </div>
                         </li>
                         <li class="members__card">
-                            <img
-                                src="/images/team/ui-designer.jpg"
+                            <img class="members__img"
+                                src="./images/team/ui-designer1Mobile.jpg"
                                 alt="John Doe"
-                                
-                            />
+                                srcset="
+                                ./images/team/ui-designer1Mobile.jpg 450w,
+                                ./images/team/ui-designer2Mobile.jpg 900w,
+                                ./images/team/ui-designer1Tablet.jpg 354w,
+                                ./images/team/ui-designer2Tablet.jpg 708w,
+                                ./images/team/ui-designer1Desktop.jpg 270w,
+                                ./images/team/ui-designer2Desktop.jpg 540w"
+
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                                />
                             <div>
                                 <h3 class="members__name">John Doe</h3>
                                 <p class="members__job">UI Designer</p>
@@ -465,20 +497,16 @@
                      </div>
                     </div>
                     <div class="sing-up-container">
-                        <div class="sign-up">
-                            <form>
+                            <form class="sign-up">
                                 <label class="sign-up__label">ZAPISZ SIĘ DO NEWSLETTERA
                                     <input class="sign-up__input" type="email" name="email" placeholder="E-mail" />
                                 </label>
                             </form>
-                        </div>
-                        <div class="footer-btn">
-                            <button type="button" class="footer-btn__button">Zapisz się
-                                <svg class="footer-btn__icon">
+                            <button type="button" class="sign-up__button">Zapisz się
+                                <svg class="sign-up__icon">
                                     <use href="./images/icons.svg#icon-send"></use>
                                 </svg>
                             </button>
-                        </div>
                     </div>                    
                 </div>
             </div>
